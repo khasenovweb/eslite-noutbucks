@@ -1,0 +1,42 @@
+// ============================================================= //
+// ======================= checkbox ============================ //
+// ============================================================= //
+.checkbox {
+    cursor: pointer;
+    input {
+        display: none;
+        &:checked + .checkbox__custom {
+            background-color: #56B65F;
+            .checkbox__custom__circle {
+                background-color: #fff;
+                transform: translateX(10rem);
+            }
+        }
+    }
+}
+.checkbox__custom {
+    display: block;
+    width: 22rem;
+    min-width: 22rem;
+    height: 12rem;
+    border-radius: 100rem;
+    background-color: #0E4769;
+    position: relative;
+    transition: 0.3s;
+}
+
+.checkbox__custom__circle {
+    display: block;
+    width: 8rem;
+    min-width: 8rem;
+    height: 8rem;
+    border-radius: 100%;
+    background-color: white;
+    position: absolute;
+    left: 2rem;
+    top: 2rem;
+    transition: 0.3s;
+}
+// ============================================================= //
+// ======================= checkbox ============================ //
+// ============================================================= //

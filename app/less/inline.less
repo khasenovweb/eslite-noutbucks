@@ -1,0 +1,128 @@
+@import "partials/_fonts.less";
+@blue: #1786C9;
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    list-style-type: none;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+html {
+    font-size: 1px;
+}
+
+body {
+    font-size: 16rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+button {
+    cursor: pointer;
+}
+
+input {
+    background-color: #fff;
+    border-radius: 5rem;
+    border: none;
+    padding: 20rem;
+    font-size: 14rem;
+}
+
+.container {
+    max-width: 1920rem;
+    margin: 0 auto;
+    padding: 0 60rem;
+}
+
+.text-blue {
+    color: #1786C9;
+}
+
+.btn {
+    padding: 15rem 30rem;
+    font-weight: 600;
+    font-size: 14rem;
+    border: none;
+    border-radius: 5rem;
+    &.btn-red {
+        background-color: #CB1520;
+        color: white;
+        box-shadow: 0px 10px 10px rgba(255, 0, 0, 0.15);
+        transition: 0.3s;
+        &:hover {
+            background-color: #AF141D;
+        }
+    }
+    &.btn-blue {
+        background-color: #1986C8;
+        color: white;
+        transition: 0.3s;
+        &:hover {
+            background-color: #1273AD;
+        }
+    }
+}
+
+.btn__ordercall {
+    background-color: @blue;
+    border: none;
+    border-radius: 5rem;
+    color: white;
+    padding: 12rem 16rem;
+    font-size: 14rem;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+    &:hover {
+        background-color: #1273AD;
+    }
+}
+
+.btn__ordercall__icon {
+    margin-right: 10rem;
+    height: 16rem;
+}
+
+@media screen and (max-width: 1700px) {
+    html {
+        font-size: 0.8px;
+    }
+}
+
+@media screen and (max-width: 1350px) {
+    html {
+        font-size: 0.7px;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    html {
+        font-size: 0.6px;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    html {
+        font-size: 0.5px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    html {
+        font-size: 1px;
+    }
+    .container {
+        padding: 0 15rem;
+    }
+}
+
+
+@import "partials/_header.less";
+@import "partials/_hero.less";
+@import "partials/_checkbox.less";

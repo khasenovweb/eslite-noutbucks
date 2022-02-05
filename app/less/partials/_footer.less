@@ -1,0 +1,119 @@
+.footer {
+    background-color: #181818;
+    padding-top: 60rem;
+    padding-bottom: 60rem;
+    color: white;
+    margin-top: 46rem;
+}
+
+.footer__main {
+    display: flex;
+    align-items: center;
+}
+
+.footer__main__logo__desc {
+    margin-left: 50rem;
+    font-size: 14rem;
+    font-weight: normal;
+    line-height: 140%;
+}
+
+.footer__main__nav {
+    margin-left: auto;
+    ul {
+        display: flex;
+        align-items: center;
+        a {
+            font-size: 16rem;
+            padding: 30rem 30rem;
+            color: white;
+        }
+    }
+}
+
+.footer__main__email {
+    font-weight: 600;
+    font-size: 18rem;
+    color: @blue;
+    margin-left: 30rem;
+}
+
+.footer__main__phone {
+    margin-left: 60rem;
+    font-weight: bold;
+    font-size: 22rem;
+    color: white;
+}
+
+.footer__main__btn__ordercall {
+    margin-left: 56rem;
+}
+
+.footer__bottom {
+    margin-top: 46rem;
+}
+
+.footer__politics {
+    color: #3F3F3F;
+    font-size: 16rem;
+}
+
+
+
+@media screen and (max-width: 950px) {
+    .footer__main__logo__desc {
+        margin-left: 30rem;
+    }
+    .footer__main__btn__ordercall {
+        margin-left: 30rem;
+    }
+    .footer__main__phone {
+        margin-left: 30rem;
+    }
+    .footer__main__nav ul a {
+        padding: 30rem 10rem;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .footer__main {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .footer__main__nav {
+        margin-left: 0;
+    }
+    .footer__main__logo__desc {
+        margin-left: 0;
+        margin-top: 20rem;
+    }
+    .footer__main__nav {
+        margin-top: 20rem;
+    }
+    .footer__main__email {
+        margin-left: 0;
+        margin-top: 20rem;
+    }
+    .footer__main__phone {
+        margin-left: 0;
+        margin-top: 20rem;
+    }
+    .footer__main__btn__ordercall {
+        margin-left: 0;
+        margin-top: 20rem;
+    }
+    .footer__main__nav {
+        margin-bottom: -20rem;
+    }
+    .footer__main__nav ul {
+        flex-wrap: wrap;
+    }
+    .footer__main__nav ul a {
+        display: block;
+        padding: 0;
+    }
+    .footer__main__nav ul li {
+        margin-right: 20rem;
+        margin-bottom: 20rem;
+    }
+}
