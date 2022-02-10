@@ -164,8 +164,9 @@
                 submitHandler: function(form) {
                     var data = $(form).serialize();
 					modal_hide('call-order');
-					modal_show('success');
-                    
+					setTimeout(() => {
+						modal_show('success');
+					}, 300);
                 }
             });
         });
