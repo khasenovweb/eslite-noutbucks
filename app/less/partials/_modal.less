@@ -21,6 +21,7 @@
     width: 460rem;
     position: relative;
     transition: 0.3s;
+    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.05);
 }
 
 .modal__title {
@@ -57,6 +58,10 @@
     padding: 10rem;
     cursor: pointer;
 }
+.modal__close__icon {
+    width: 20rem;
+    height: 20rem;
+}
 
 [data-modal] {
     visibility: hidden;
@@ -74,8 +79,17 @@
     }
 }
 
+.modalproduct {
+    width: 1194rem;
+}
+
 @media screen and (max-width: 850px) {
     .modal__wrapper {
-        padding-top: 50rem;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .modal__close {
+        right: 10rem;
+        top: 10rem;
     }
 }

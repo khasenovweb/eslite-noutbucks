@@ -98,7 +98,7 @@
 	<section class="modal__wrapper" data-modal="call-order">
 		<div class="modal">
 			<div class="modal__close" data-modal-close="call-order">
-				<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<svg class="modal__close__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path fill-rule="evenodd" clip-rule="evenodd" d="M19.5638 1.50527L18.0589 0.000370765L9.78208 8.27719L1.50489 0L0 1.50489L8.27718 9.78208L0.000158472 18.0591L1.50505 19.564L9.78208 11.287L18.0587 19.5636L19.5636 18.0587L11.287 9.78208L19.5638 1.50527Z" fill="#1986C8"/>
 				</svg>
 			</div>
@@ -122,10 +122,23 @@
 			</form>
 		</div>
 	</section>
+	<!-- -------------------------------------------------------------- -->
+	<section class="modal__wrapper active" data-modal="product">
+		<div class="modal modalproduct">
+			<div class="modal__close" data-modal-close="product">
+				<svg class="modal__close__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M19.5638 1.50527L18.0589 0.000370765L9.78208 8.27719L1.50489 0L0 1.50489L8.27718 9.78208L0.000158472 18.0591L1.50505 19.564L9.78208 11.287L18.0587 19.5636L19.5636 18.0587L11.287 9.78208L19.5638 1.50527Z" fill="#1986C8"/>
+				</svg>
+			</div>
+			<div class="modalproduct__gallery"></div>
+			<div class="modalproduct__main"></div>
+		</div>
+	</section>
+	<!-- -------------------------------------------------------------- -->
 	<section class="modal__wrapper" data-modal="success">
 		<div class="modal">
 			<div class="modal__close" data-modal-close="success">
-				<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<svg class="modal__close__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path fill-rule="evenodd" clip-rule="evenodd" d="M19.5638 1.50527L18.0589 0.000370765L9.78208 8.27719L1.50489 0L0 1.50489L8.27718 9.78208L0.000158472 18.0591L1.50505 19.564L9.78208 11.287L18.0587 19.5636L19.5636 18.0587L11.287 9.78208L19.5638 1.50527Z" fill="#1986C8"/>
 				</svg>
 			</div>
@@ -163,10 +176,13 @@
                 },
                 submitHandler: function(form) {
                     var data = $(form).serialize();
+					//-----------
+					$(form)[0].reset();
 					modal_hide('call-order');
 					setTimeout(() => {
 						modal_show('success');
 					}, 300);
+					//-----------
                 }
             });
         });
