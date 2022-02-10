@@ -1,12 +1,12 @@
 @import "partials/_fonts.less";
-@blue: #1786C9;
+@blue: #1786c9;
 * {
     margin: 0;
     padding: 0;
     outline: none;
     list-style-type: none;
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
 }
 
 html {
@@ -15,6 +15,10 @@ html {
 
 body {
     font-size: 16rem;
+    padding-top: 80rem;
+}
+.body_hidden {
+    overflow-y: hidden;
 }
 
 a {
@@ -24,6 +28,10 @@ a {
 
 button {
     cursor: pointer;
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
 }
 
 input {
@@ -32,6 +40,41 @@ input {
     border: none;
     padding: 20rem;
     font-size: 14rem;
+    &.error {
+        border: 1px solid #feacac;
+        color: #ec3d3d;
+        &::placeholder {
+            color: #ec3d3d;
+        }
+    }
+    &.valid {
+        border: 1px solid #9fca9c;
+    }
+}
+label.error {
+    display: none !important;
+}
+
+textarea {
+    background-color: #fff;
+    border-radius: 5rem;
+    border: none;
+    padding: 20rem;
+    font-size: 14rem;
+}
+
+.form__politics {
+    display: flex;
+    align-items: flex-start;
+    .checkbox {
+        margin-top: 2rem;
+        margin-right: 10rem;
+    }
+}
+.form__politics__title {
+    font-size: 12rem;
+    color: black;
+    opacity: 0.3;
 }
 
 .container {
@@ -41,7 +84,7 @@ input {
 }
 
 .text-blue {
-    color: #1786C9;
+    color: #1786c9;
 }
 
 .btn {
@@ -51,20 +94,20 @@ input {
     border: none;
     border-radius: 5rem;
     &.btn-red {
-        background-color: #CB1520;
+        background-color: #cb1520;
         color: white;
         box-shadow: 0px 10px 10px rgba(255, 0, 0, 0.15);
         transition: 0.3s;
         &:hover {
-            background-color: #AF141D;
+            background-color: #af141d;
         }
     }
     &.btn-blue {
-        background-color: #1986C8;
+        background-color: #1986c8;
         color: white;
         transition: 0.3s;
         &:hover {
-            background-color: #1273AD;
+            background-color: #1273ad;
         }
     }
 }
@@ -80,7 +123,7 @@ input {
     align-items: center;
     transition: 0.3s;
     &:hover {
-        background-color: #1273AD;
+        background-color: #1273ad;
     }
 }
 
@@ -117,11 +160,13 @@ input {
     html {
         font-size: 1px;
     }
+    body {
+        padding-top: 56rem;
+    }
     .container {
         padding: 0 15rem;
     }
 }
-
 
 @import "partials/_header.less";
 @import "partials/_hero.less";

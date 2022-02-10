@@ -20,6 +20,8 @@
 // ==============================//
 @@include('partials/_hero.js')
 @@include('partials/_products.js')
+@@include('partials/_modal.js')
+@@include('partials/_checkbox.js')
 // ===============================//
 // ====== END Partials ===========//
 // ==============================//
