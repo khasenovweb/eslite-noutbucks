@@ -1,0 +1,40 @@
+.mobilenav {
+    background-color: #fff;
+    position: fixed;
+    top: 57rem;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    padding: 25rem 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: 0.3s;
+    transform: translateX(-100%);
+    &.active {
+        transform: translateX(0);
+    }
+}
+.mobilenav__links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20rem;
+}
+
+.mobilenav__phone {
+    margin-top: 40rem;
+    font-weight: bold;
+    font-size: 16rem;
+    display: inline-block;
+}
+.mobilenav__email {
+    font-weight: 600;
+    font-size: 14rem;
+    color: @blue;
+    display: inline-block;
+    margin-top: 10rem;
+}
+
+.mobilenav__btn__ordercall {
+    margin-top: 20rem;
+}

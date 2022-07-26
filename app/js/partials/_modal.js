@@ -4,6 +4,7 @@ function modal_show(id) {
     $('.header').css('padding-right', get_scrollbar_width()+'px');
     $('body').addClass('body_hidden');
 }
+
         
 function modal_hide(id) {
     $('[data-modal="'+id+'"]').removeClass('active');

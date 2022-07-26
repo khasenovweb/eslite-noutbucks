@@ -65,7 +65,7 @@
                 </div>
                 <form action="/">
                     <input type="text" placeholder="Введите ваше имя"> 
-                    <input type="text" placeholder="+7 (___) ___-__-___"> 
+                    <input name="phone" type="text" placeholder="+7 (___) ___-__-___"> 
                     <div class="hero__form__politics">
                         <label for="1" class="checkbox">
                             <input data-form-politics-checkbox class="form__checkbox__politics" type="checkbox" id="1" checked>
@@ -170,7 +170,7 @@
 <!-- ----------------------------------------------- -->
 <!-- --------------- products ---------------------- -->
 <!-- ----------------------------------------------- -->
-<section class="products">
+<section class="products" id="products">
     <h2 class="products__title">Наши товары</h2>
     <div class="products__category">
         <div class="container">
@@ -181,7 +181,7 @@
                 <div class="products__category__slider owl-carousel">
                     <div class="products__category__slider__item">
                         {% for el in range(6) %}
-                        <div class="products__category__slider__product">
+                        <div class="products__category__slider__product" data-modal-show="product-1">
                             <div class="products__category__slider__product__russian__preview"></div>
                             <div class="products__category__slider__product__russian">
                                 <div class="products__category__slider__product__russian__icon"></div>
@@ -189,9 +189,9 @@
                             </div>
                             <div class="products__category__slider__product__img" style="background-image: url(img/product.png);"></div>
                             <div class="products__category__slider__product__title">Моноблок гравитон М40И {{el}}</div>
-                            <!-- <div class="products__category__slider__product__desc">
+                            <div class="products__category__slider__product__desc">
                                 Надежный и производительный моноблок с экраном 23.8". Разработан и произведён в России.
-                            </div> -->
+                            </div>
                             <div class="products__category__slider__product__readmore">Подробнее</div>
                         </div>
                         {% endfor %}
@@ -324,7 +324,7 @@
         <div class="selectionaid__content">
             <div class="selectionaid__content__title">Поможем подобрать и составить список необходимого оборудования</div>
             <div class="selectionaid__content__desc">Оставьте заявку и наш менеджер свяжется с вами и поможет подобрать нужное вам обородование</div>
-            <button class="btn btn-red selectionaid__content__btn">Отправить заявку</button>
+            <button class="btn btn-red selectionaid__content__btn" data-modal-show="call-order">Отправить заявку</button>
             <img src="img/selectionaid-2.png" alt="" class="selectionaid__content__img">
         </div>
     </div>

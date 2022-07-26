@@ -6,7 +6,8 @@ $('.products__category__slider').each(function(i, el){
         items: 1,
         nav: true,
         dotsContainer: dots_container,
-        navText: ["<img src='/img/hero-slider-arrow-left.svg'>","<img src='/img/hero-slider-arrow-right.svg' >"],
+        mouseDrag: false,
+        navText: ["<img src='/wp-content/themes/eslite-noutbucks/img/hero-slider-arrow-left.svg'>","<img src='/wp-content/themes/eslite-noutbucks/img/hero-slider-arrow-right.svg' >"],
         responsive: {
             0: {
                 nav: false,

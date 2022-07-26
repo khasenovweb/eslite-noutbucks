@@ -106,8 +106,19 @@ textarea {
         background-color: #1986c8;
         color: white;
         transition: 0.3s;
+        border: 1px solid @blue;
         &:hover {
             background-color: #1273ad;
+        }
+        &.border {
+            background: none;
+            color: @blue;
+            border: 1px solid @blue;
+            &:hover {
+                background-color: #1986c8;
+                border: 1px solid #1986c8;
+                color: white;
+            }
         }
     }
 }

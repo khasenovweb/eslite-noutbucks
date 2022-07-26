@@ -88,13 +88,118 @@
     slidesToScroll: 1,
     arrows: false,
     fade: true,
-    asNavFor: '.modalproduct__gallery__thumbnails'
+    asNavFor: '.modalproduct__gallery__thumbnails',
+    dots: true,
+    dotsClass: 'modalproduct__gallery__main__dots'
   });
   $('.modalproduct__gallery__thumbnails').slick({
     slidesToShow: 3,
     slidesToScroll: 1,
     asNavFor: '.modalproduct__gallery__main',
-    dots: true,
     centerMode: true,
-    focusOnSelect: true
+    // centerPadding: '100px',
+    focusOnSelect: true,
+    prevArrow:'.slick-prev',
+    nextArrow:'.slick-next',
+    
   });
+
+
+$('[data-modal-product-characteristics-show]').click(function(){
+  var thisvar = $(this);
+  thisvar.closest('[data-modal]').removeClass('active');
+    setTimeout(function(){
+        $('body').css('padding-right', '0');
+        $('.header').css('padding-right', '0');
+        $('body').removeClass('body_hidden');
+
+        thisvar.closest('.product__modals__container').find('[data-modal-product-characteristics]').addClass('active');
+        $('body').css('padding-right', get_scrollbar_width()+'px');
+        $('.header').css('padding-right', get_scrollbar_width()+'px');
+        $('body').addClass('body_hidden');
+  }, 300);
+});
+
+
+$('[data-modal-product-characteristics-hide]').click(function(){
+  var thisvar = $(this);
+  thisvar.closest('[data-modal-product-characteristics]').removeClass('active');
+  setTimeout(function(){
+      $('body').css('padding-right', '0');
+      $('.header').css('padding-right', '0');
+      $('body').removeClass('body_hidden');
+
+      thisvar.closest('.product__modals__container').find('[data-modal]').addClass('active');
+      $('body').css('padding-right', get_scrollbar_width()+'px');
+      $('.header').css('padding-right', get_scrollbar_width()+'px');
+      $('body').addClass('body_hidden');
+  }, 300);
+});
+
+
+$('[data-modal-product-characteristics]').click(function(){
+  if ($(event.target).closest(".modal").length) return;
+  var thisvar = $(this);
+  thisvar.closest('[data-modal-product-characteristics]').removeClass('active');
+  setTimeout(function(){
+      $('body').css('padding-right', '0');
+      $('.header').css('padding-right', '0');
+      $('body').removeClass('body_hidden');
+
+      thisvar.closest('.product__modals__container').find('[data-modal]').addClass('active');
+      $('body').css('padding-right', get_scrollbar_width()+'px');
+      $('.header').css('padding-right', get_scrollbar_width()+'px');
+      $('body').addClass('body_hidden');
+  }, 300);
+});
+
+
+
+
+
+$('[data-modal-product-lead-show]').click(function(){
+  var thisvar = $(this);
+  thisvar.closest('[data-modal]').removeClass('active');
+    setTimeout(function(){
+        $('body').css('padding-right', '0');
+        $('.header').css('padding-right', '0');
+        $('body').removeClass('body_hidden');
+
+        thisvar.closest('.product__modals__container').find('[data-modal-product-lead]').addClass('active');
+        $('body').css('padding-right', get_scrollbar_width()+'px');
+        $('.header').css('padding-right', get_scrollbar_width()+'px');
+        $('body').addClass('body_hidden');
+  }, 300);
+});
+
+$('[data-modal-product-lead-hide]').click(function(){
+  var thisvar = $(this);
+  thisvar.closest('[data-modal-product-lead]').removeClass('active');
+  setTimeout(function(){
+      $('body').css('padding-right', '0');
+      $('.header').css('padding-right', '0');
+      $('body').removeClass('body_hidden');
+
+      thisvar.closest('.product__modals__container').find('[data-modal]').addClass('active');
+      $('body').css('padding-right', get_scrollbar_width()+'px');
+      $('.header').css('padding-right', get_scrollbar_width()+'px');
+      $('body').addClass('body_hidden');
+  }, 300);
+});
+
+
+$('[data-modal-product-lead]').click(function(){
+  if ($(event.target).closest(".modal").length) return;
+  var thisvar = $(this);
+  thisvar.closest('[data-modal-product-lead]').removeClass('active');
+  setTimeout(function(){
+      $('body').css('padding-right', '0');
+      $('.header').css('padding-right', '0');
+      $('body').removeClass('body_hidden');
+
+      thisvar.closest('.product__modals__container').find('[data-modal]').addClass('active');
+      $('body').css('padding-right', get_scrollbar_width()+'px');
+      $('.header').css('padding-right', get_scrollbar_width()+'px');
+      $('body').addClass('body_hidden');
+  }, 300);
+});

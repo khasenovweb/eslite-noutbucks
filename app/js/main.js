@@ -29,6 +29,21 @@
 // ====== END Partials ===========//
 // ==============================//
  
-$(document).ready(function(){
-    
+$('input[name="phone"]').mask('+7 (999) 999-99-99');
+
+
+$("[data-scroll]").mPageScroll2id({
+    scrollSpeed: 900,
+    keepHighlightUntilNext: true,
+    offset: 80,
+    onStart:function(){
+        $('body').removeClass('overflowhidden');
+        $('.mobilenav').removeClass('active');
+        $('.header__hamburger').removeClass('active');
+    },
+});
+
+$('.header__hamburger').click(function(){
+    $(this).toggleClass('active');
+    $('.mobilenav').toggleClass('active');
 });

@@ -12,7 +12,7 @@
 .products__category {
     padding: 70rem 0;
     &.blue {
-        background-color: #FAFCFF;
+        background-color: #fafcff;
     }
 }
 .products__category__title {
@@ -43,7 +43,7 @@
 }
 
 .products__category__slider__product {
-    border: 1px solid #F4F4F4;
+    border: 1px solid #f4f4f4;
     border-radius: 5rem;
     padding: 15rem;
     display: flex;
@@ -53,10 +53,22 @@
     &:first-child {
         grid-column: span 2;
         grid-row: span 2;
+        .products__category__slider__product__desc {
+            display: block;
+        }
+        .products__category__slider__product__title {
+            font-size: 18rem;
+        }
     }
     &:nth-child(3) {
         grid-column: span 2;
         grid-row: span 2;
+        .products__category__slider__product__desc {
+            display: block;
+        }
+        .products__category__slider__product__title {
+            font-size: 18rem;
+        }
     }
     &:hover {
         .products__category__slider__product__russian {
@@ -74,11 +86,13 @@
 }
 .products__category__slider__product__title {
     font-weight: bold;
-    font-size: 18rem;
+    font-size: 15rem;
     margin-top: auto;
 }
 .products__category__slider__product__desc {
     margin-top: 10rem;
+    display: none;
+    font-size: 14rem;
 }
 .products__category__slider__product__readmore {
     margin-top: 10rem;
@@ -118,7 +132,7 @@
     background-image: url(../img/product-russian-active.png);
 }
 .products__category__slider__product__russian__title {
-    background-color: #F2F8FF;
+    background-color: #f2f8ff;
     height: 49rem;
     display: flex;
     align-items: center;
@@ -139,7 +153,7 @@
         height: 6rem;
         border-radius: 100rem;
         border: none;
-        background-color: #CAD7E5;
+        background-color: #cad7e5;
         margin: 0 5rem;
         transition: 0.3s;
         &.active {
@@ -174,11 +188,7 @@
     margin-top: 30rem;
 }
 
-
-
-
-
-@media screen and (max-width: 850px){
+@media screen and (max-width: 850px) {
     .products__category__mobile {
         display: block;
     }
@@ -212,5 +222,13 @@
         padding-left: 8rem;
         padding-right: 8rem;
         font-size: 12rem;
+    }
+    .products__category__slider__product:first-child
+        .products__category__slider__product__title {
+        font-size: 14rem;
+    }
+    .products__category__slider__product:nth-child(3)
+        .products__category__slider__product__title {
+        font-size: 14rem;
     }
 }

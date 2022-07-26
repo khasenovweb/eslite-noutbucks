@@ -24,7 +24,7 @@
 				</div>
 				<div class="header__nav">
 					<ul>
-						<li><a href="">Товары</a></li>
+						<li><a href="#products" data-scroll>Товары</a></li>
 						<li><a href="">Решения</a></li>
 						<li><a href="">Отзывы</a></li>
 						<li><a href="">Контакты</a></li>
@@ -106,7 +106,7 @@
 			<div class="modal__desc">Оставьте свои контакты, мы ответим в ближайшее время</div>
 			<form class="modal__form" data-validate='modal-form'>
 				<input name="input_1" type="text" placeholder="Введите ваше имя">
-				<input name="input_2" type="text" placeholder="Введите ваш телефон">
+				<input name="phone" type="text" placeholder="Введите ваш телефон">
 				<input name="input_3" type="text" placeholder="E-mail">
 				<textarea name="input_4" id="" cols="30" rows="5" placeholder="Ваш комментарий"></textarea>
 				<div class="form__politics">
@@ -123,43 +123,6 @@
 		</div>
 	</section>
 	<!-- -------------------------------------------------------------- -->
-	<section class="modal__wrapper active" data-modal="product">
-		<div class="modal modalproduct">
-			<div class="modal__close" data-modal-close="product">
-				<svg class="modal__close__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path fill-rule="evenodd" clip-rule="evenodd" d="M19.5638 1.50527L18.0589 0.000370765L9.78208 8.27719L1.50489 0L0 1.50489L8.27718 9.78208L0.000158472 18.0591L1.50505 19.564L9.78208 11.287L18.0587 19.5636L19.5636 18.0587L11.287 9.78208L19.5638 1.50527Z" fill="#1986C8"/>
-				</svg>
-			</div>
-			<div class="modalproduct__content">
-				<div class="modalproduct__gallery">
-					<div class="modalproduct__gallery__main owl-carousel">
-						<div class="modalproduct__gallery__main__item" style="background-image: url(img/product.png);"></div>
-						<div class="modalproduct__gallery__main__item" style="background-image: url(https://royal-computers.ru/upload/thumbs/sborki/source/igrovye_5f0ede-min_6009a4.png);"></div>
-						<div class="modalproduct__gallery__main__item" style="background-image: url(https://ichip.ru/images/cache/2019/8/27/fit_930_519_false_crop_1200_628_0_0_q90_299852_61eb57667c.jpeg);"></div>
-						<div class="modalproduct__gallery__main__item" style="background-image: url(https://www.ferra.ru/imgs/2018/11/24/08/2464352/76d5e6fe1101ac76da1e37f12eeaf02f77ad0550.jpg);"></div>
-						<div class="modalproduct__gallery__main__item" style="background-image: url(https://topsto-crimea.ru/images/companies/1/santeh/PersonalComputer.jpg?1564658874412);"></div>
-						<div class="modalproduct__gallery__main__item" style="background-image: url(https://17.img.avito.st/640x480/8657870217.jpg);"></div>
-					</div>
-					<div class="modalproduct__gallery__thumbnails owl-carousel">
-						<div class="modalproduct__gallery__thumbnails__item" style="background-image: url(img/product.png);"></div>
-						<div class="modalproduct__gallery__thumbnails__item" style="background-image: url(https://royal-computers.ru/upload/thumbs/sborki/source/igrovye_5f0ede-min_6009a4.png);"></div>
-						<div class="modalproduct__gallery__thumbnails__item" style="background-image: url(https://ichip.ru/images/cache/2019/8/27/fit_930_519_false_crop_1200_628_0_0_q90_299852_61eb57667c.jpeg);"></div>
-						<div class="modalproduct__gallery__thumbnails__item" style="background-image: url(https://www.ferra.ru/imgs/2018/11/24/08/2464352/76d5e6fe1101ac76da1e37f12eeaf02f77ad0550.jpg);"></div>
-						<div class="modalproduct__gallery__thumbnails__item" style="background-image: url(https://topsto-crimea.ru/images/companies/1/santeh/PersonalComputer.jpg?1564658874412);"></div>
-						<div class="modalproduct__gallery__thumbnails__item" style="background-image: url(https://17.img.avito.st/640x480/8657870217.jpg);"></div>
-					</div>
-				</div>
-				<div class="modalproduct__main">
-					<img src="img/modalproduct-brand.svg" alt="" class="modalproduct__brand">
-					<div class="modalproduct__russian">
-						<div class="modalproduct__russian__icon"></div>
-						<div class="modalproduct__russian__title">Импортозамещение</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- -------------------------------------------------------------- -->
 	<section class="modal__wrapper" data-modal="success">
 		<div class="modal">
 			<div class="modal__close" data-modal-close="success">
@@ -171,8 +134,34 @@
 			<div class="modal__desc">Ваша заявка отправлена</div>
 		</div>
 	</section>
+	{% include 'partials/_modals_product.html' %}
 	<!-- ----------------------------------------------- -->
 	<!-- ------------- END modals ---------------------- -->
+	<!-- ----------------------------------------------- -->
+
+	<!-- ----------------------------------------------- -->
+	<!-- -------------- mobilenav ---------------------- -->
+	<!-- ----------------------------------------------- -->
+	<section class="mobilenav">
+		<ul class="mobilenav__links">
+			<li><a href="#products" data-scroll>Товары</a></li>
+			<li><a href="">Отзывы</a></li>
+			<li><a href="">Решения</a></li>
+			<li><a href="">Контакты</a></li>
+		</ul>
+		<a href="tel:+7 (843) 247-04-97" class="mobilenav__phone">+7 (843) 247-04-97</a>
+		<a href="mailto:info@eslite.ru" class="mobilenav__email">info@eslite.ru</a>
+		<button class="btn__ordercall mobilenav__btn__ordercall" data-modal-show="call-order">
+			<svg class="btn__ordercall__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M12.1641 10.5844C11.6414 10.0683 10.9888 10.0683 10.4694 10.5844C10.0732 10.9773 9.67699 11.3702 9.28744 11.7697C9.1809 11.8796 9.091 11.9029 8.96115 11.8296C8.70479 11.6898 8.43177 11.5766 8.18539 11.4234C7.03673 10.7009 6.07452 9.77202 5.22218 8.72658C4.79934 8.20718 4.42312 7.65117 4.16009 7.02523C4.10682 6.89871 4.11681 6.81547 4.22002 6.71226C4.61622 6.32938 5.00244 5.9365 5.39199 5.54363C5.93469 4.9976 5.93469 4.35834 5.38866 3.80898C5.07902 3.49601 4.76938 3.18971 4.45974 2.87674C4.14011 2.55711 3.82381 2.23415 3.50086 1.91786C2.97813 1.40845 2.32556 1.40845 1.80617 1.92119C1.40663 2.31406 1.02375 2.71692 0.617555 3.10314C0.241327 3.45939 0.0515486 3.89555 0.0115952 4.40495C-0.0516643 5.23399 0.151432 6.01641 0.437765 6.77885C1.02375 8.35701 1.91604 9.75871 2.99811 11.0439C4.45974 12.7818 6.20437 14.1569 8.24532 15.1491C9.16425 15.5952 10.1165 15.9382 11.1519 15.9948C11.8644 16.0347 12.4837 15.8549 12.9798 15.2989C13.3194 14.9194 13.7023 14.5731 14.0619 14.2102C14.5946 13.6708 14.5979 13.0182 14.0685 12.4855C13.4359 11.8496 12.8 11.217 12.1641 10.5844Z" fill="#F0F0F0"/>
+				<path d="M11.5282 7.93076L12.7568 7.72101C12.5636 6.59232 12.0309 5.57018 11.2219 4.7578C10.3662 3.90213 9.28414 3.36276 8.09219 3.19629L7.91906 4.43151C8.84132 4.56136 9.68034 4.97754 10.3429 5.6401C10.9688 6.26604 11.3784 7.05845 11.5282 7.93076Z" fill="#F0F0F0"/>
+				<path d="M13.4493 2.59031C12.0309 1.17197 10.2364 0.276344 8.25533 0L8.0822 1.23523C9.79353 1.47495 11.3451 2.25071 12.5703 3.47262C13.7323 4.63459 14.4947 6.10288 14.7711 7.71766L15.9996 7.50791C15.6767 5.63676 14.7944 3.93874 13.4493 2.59031Z" fill="#F0F0F0"/>
+			</svg>
+			Заказать звонок
+		</button>
+	</section>
+	<!-- ----------------------------------------------- -->
+	<!-- ---------- END mobilenav ---------------------- -->
 	<!-- ----------------------------------------------- -->
 	
 	<link rel="stylesheet" href="css/main.css">
